@@ -1,0 +1,17 @@
+dateModified: 1636362164
+email:
+  fromEmail: stas@wideweb.pro
+  fromName: new-test
+  transportType: craft\mail\transportadapters\Sendmail
+system:
+  edition: solo
+  live: true
+  name: new-test
+  schemaVersion: 3.6.8
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

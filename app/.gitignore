@@ -54,6 +54,7 @@ vendor/
 FauxTwigExtension.php
 storage
 web/uploads
+web/cpresources
 
 .bash_history
 .psql_history

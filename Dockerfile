@@ -2,6 +2,10 @@ FROM composer:1 as vendor
 COPY /app/composer.json composer.json
 COPY /app/composer.lock composer.lock
 COPY /app/plugins plugins
+##
+COPY /app/vendor vendor
+COPY /app/storage storage
+##
 RUN composer clearcache
 RUN composer install --ignore-platform-reqs --no-interaction --prefer-dist
 
