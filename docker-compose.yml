@@ -6,6 +6,7 @@ services:
       - 80:8080
     volumes:
       - ./app/.:/app/.
+      - ./app/templates/.:/app/templates/
     links:
       - db
     environment:

@@ -22,17 +22,7 @@ use craft\helpers\App;
 return [
     'id' => App::env('APP_ID') ?: 'CraftCMS',
     'modules' => [
-        'base-module' => \modules\Module::class,
+        'my-module' => \modules\Module::class,
     ],
     //'bootstrap' => ['my-module'],
-    /*'components' => [
-        'cache' => [
-            'class' => yii\redis\Cache::class,
-            'defaultDuration' => 86400,
-            'redis' => [
-                'unixSocket' => '/home/craft/.kxcache/redis.sock',
-                'database' => 0,
-            ],
-        ],
-    ],*/
 ];

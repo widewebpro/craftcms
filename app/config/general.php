@@ -8,48 +8,36 @@
  * @see \craft\config\GeneralConfig
  */
 
+// Used for loading css and js asset urls from manafest.json
+$assetsManifest = @json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT'].'/_compiled/manifest.json')) ?: [];
+$assetsManifestLegacy = @json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT'].'/_compiled/manifest-legacy.json')) ?: [];
+
 use craft\helpers\App;
 
+$isDev = App::env('ENVIRONMENT') === 'dev';
+$isProd = App::env('ENVIRONMENT') === 'production';
+
 return [
-    // Global settings
-    '*' => [
-        // Default Week Start Day (0 = Sunday, 1 = Monday...)
-        'defaultWeekStartDay' => 1,
+  '*' => [
+    'assetsManifest' => (array)$assetsManifest,
+    'assetsManifestLegacy' => (array)$assetsManifestLegacy,
 
-        // Whether generated URLs should omit "index.php"
-        'omitScriptNameInUrls' => true,
+    'baseUrl' => App::env('PRIMARY_SITE_URL'),
+    'basePath' => $_SERVER['DOCUMENT_ROOT'] . '/',
 
-        // Control panel trigger word
-        'cpTrigger' => 'admin',
+    'showGrid' => App::env('SHOW_GRID'),
+    'allowUpdates' => $isDev,
+    'devMode' => $isDev,
+    'allowAdminChanges' => $isDev,
+    'disallowRobots' => !$isProd,
 
-        // The secure key Craft will use for hashing and encrypting data
-        'securityKey' => App::env('SECURITY_KEY'),
-        'devMode' => true,
+    'defaultWeekStartDay' => 1,
+    'omitScriptNameInUrls' => true,
+    'cpTrigger' => App::env('CP_TRIGGER') ?: 'admin',
+    'securityKey' => App::env('SECURITY_KEY'),
+  ],
 
-    ],
-
-    // Dev environment settings
-    'dev' => [
-        // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
-        'devMode' => true,
-
-        // Prevent crawlers from indexing pages and following links
-        'disallowRobots' => true,
-    ],
-
-    // Staging environment settings
-    'staging' => [
-        // Set this to `false` to prevent administrative changes from being made on staging
-        'allowAdminChanges' => true,
-
-        // Prevent crawlers from indexing pages and following links
-        'disallowRobots' => true,
-    ],
-
-    // Production environment settings
-    'production' => [
-        // Set this to `false` to prevent administrative changes from being made on production
-        'allowAdminChanges' => true,
-    ],
-    'securityKey' => getenv('SECURITY_KEY'),
+  'dev' => [],
+  'staging' => [],
+  'production' => [],
 ];

@@ -1,13 +1,17 @@
-dateModified: 1636362164
+dateModified: 1636372579
 email:
   fromEmail: stas@wideweb.pro
   fromName: new-test
   transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    1a362cf2-4f30-4008-bfba-20783c79bc6e: Homepage # Homepage
+    f9789062-0314-4422-9fc0-2e5b7dd706fe: Homepage # Homepage
 system:
   edition: solo
   live: true
   name: new-test
-  schemaVersion: 3.6.8
+  schemaVersion: 3.7.8
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
