@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: false
+handle: home
+name: home
+propagationMethod: all
+siteSettings:
+  6897bdc0-7d48-4669-9ba2-8d181611acfe: # Craft
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/home/_index.twig
+    uriFormat: __home__
+type: single

@@ -1,10 +1,7 @@
-module.exports =  {
-  plugins: [
-    require('postcss-smart-import')({
-      path: [
-        'templates'
-      ]
-    }),
-    require('postcss-cssnext')
-  ]
-};
+module.exports = {
+  plugins: {
+    'postcss-preset-env': {
+      browsers: 'last 2 versions',
+    },
+  },
+}

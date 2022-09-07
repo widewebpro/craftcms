@@ -1,0 +1,24 @@
+dateModified: 1662388807
+email:
+  fromEmail: boichev88@gmail.com
+  fromName: Craft
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    1aaac737-181b-41e0-9e19-eb00f3f4fb64: home # home
+    7d511383-56e6-46b7-a6f1-77f92f451f3c: Common # Common
+    157fd5f0-27a1-43bd-a5aa-63652ef1439d: home # home
+    6897bdc0-7d48-4669-9ba2-8d181611acfe: Craft # Craft
+    ddc2d4cb-0de1-470c-b9d2-31f2d5e7ada2: Craft # Craft
+system:
+  edition: solo
+  live: true
+  name: Craft
+  schemaVersion: 3.7.33
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
