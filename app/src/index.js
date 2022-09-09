@@ -24,3 +24,5 @@ import '@/styles/index.scss'
 //
 // const app = document.querySelector('#root')
 // app.append(logo, heading, imageBackground, imagePublic)
+
+console.log('it is work')
