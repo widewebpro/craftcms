@@ -1,8 +1,0 @@
-baseUrl: $PRIMARY_SITE_URL
-handle: default
-hasUrls: true
-language: ru
-name: Craft
-primary: true
-siteGroup: ddc2d4cb-0de1-470c-b9d2-31f2d5e7ada2 # Craft
-sortOrder: 1

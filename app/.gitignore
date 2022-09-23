@@ -50,6 +50,8 @@ Thumbs.db
 *.mov
 *.wmv
 
+cpresources/
+config/project/
 vendor/
 FauxTwigExtension.php
 storage
