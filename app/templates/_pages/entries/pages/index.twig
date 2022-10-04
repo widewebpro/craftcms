@@ -1,8 +1,8 @@
 {#
- Section: Pages
- Section Type: Structure
- URI Format: {entry.last().uri}/{parent.uri}/{slug}
- Template: entries/pages/index
+    Section: Pages
+    Section Type: Structure
+    URI Format: {entry.last().uri}/{parent.uri}/{slug}
+    Template: entries/pages/index
 #}
 
 {% extends "_layouts/main" %}
@@ -10,7 +10,7 @@
 {% set pageTemplate = type|replace('_', '/') %}
 
 {% block content %}
-    {% include ["pages/entries/pages/types/" ~ pageTemplate, "entries/fallback"] with {
+    {% include ["_pages/entries/pages/types/" ~ pageTemplate, "entries/fallback"] with {
         pageTemplate: pageTemplate
     } %}
 
